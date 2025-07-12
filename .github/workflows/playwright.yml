@@ -14,9 +14,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore pw-dot-net.sln
     - name: Build & Install
-      run: dotnet build ../../pw-dot-net.sln
+      run: dotnet build pw-dot-net.sln
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Run your tests
-      run: dotnet test
+      run: dotnet test pw-dot-net.sln

@@ -15,9 +15,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore StackOverflow/pw-dot-net.sln
+      run: dotnet restore pw-dot-net.sln
     - name: Build & Install
-      run: dotnet build StackOverflow/pw-dot-net.sln
+      run: dotnet build pw-dot-net.sln
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Run your tests

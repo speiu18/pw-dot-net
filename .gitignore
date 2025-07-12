@@ -2,4 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/StackOverflow/bin/Debug/net8.0
+/StackOverflow/bin
+/.vs/pw-dot-net

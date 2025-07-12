@@ -24,8 +24,10 @@ jobs:
     - name: Ensure browsers are installed
       run: pwsh StackOverflow/bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Set environment
-      run: echo "TEST_ENVIRONMENT=dev >> $GITHUB_ENV" 
-    - name: Run your tests
+      run: |
+          echo "$TEST_ENVIRONMENT" 
+          env: TEST_ENVIRONMENT="dev"
+    - name: Run tests
       run: dotnet test
 
      

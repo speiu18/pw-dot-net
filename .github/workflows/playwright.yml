@@ -15,7 +15,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Install PowerShell
-      run: dotnet tool install --global PowerShell
+      run: 
+        sudo apt-get update
+        sudo apt-get install -y powershell
 
     - name: Restore dependencies
       run: dotnet restore pw-dot-net.sln

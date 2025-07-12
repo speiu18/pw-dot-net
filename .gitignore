@@ -2,9 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/StackOverflow/bin
 /.vs/pw-dot-net
 /StackOverflow/obj/Debug/net8.0
 /StackOverflow/obj/Debug/net8.0/StackOverflow.AssemblyInfo.cs
 /StackOverflow/obj/Debug/net8.0/StackOverflow.AssemblyInfoInputs.cache
-*.sln
+/StackOverflow/obj/Release/net8.0
+/.vs
